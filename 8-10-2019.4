@@ -1,0 +1,48 @@
+/******************************************************************************
+
+5. En un laboratorio de análisis clínico, un médico determina si una persona
+tiene anemia o no, lo cual depende de su nivel de hemoglobina en la sangre,
+de su edad y de su género. Si el nivel de hemoglobina que tiene una persona
+es menor que el rango que le corresponde, se determina su resultado como
+positivo y en caso contrario como negativo. La tabla en la que el medico
+se basa para obtener el resultado para sexo femenino es la siguiente:
+
+EDAD        NIVEL HEMOGLOBINA
+0 entre 1 mes                        entre 13 y 26 g%
+> 1 y < = 6 meses                  entre 10 y 18 g%
+> 6 y < = 12 meses                  entre 11 y 15 g%
+> 1 y < = 5  años                        entre 11.5 y 15 g%
+> 5 y < = 10 años                             entre 12.6 y 15.5 g%
+> 10 y < = 15 años                           entre 13 y 15.5 g%
+
+*******************************************************************************/
+#include <stdio.h>
+
+void main()
+{
+    int edadM;
+    float HemoN;
+    printf("Escriba su edad en meses");
+    scanf("%d",&edadM);
+    printf("Escriba el nivel de hemoglobina: ");
+    scanf("%f",&HemoN);
+    if(0<edadM&&edadM<=1&&13<=HemoN&&HemoN<=26)
+        printf("Escriba cuantos meses tiene:");
+    else if(0<edadM&&edadM<=1&&13<=HemoN&&HemoN<=26)
+        printf("No tiene anemia.");
+    else if(1<edadM&&edadM<=6&&10<=HemoN&&HemoN<=18)
+        printf("No tiene anemia.");
+    else if(6<edadM&&edadM<=12&&11<=HemoN&&HemoN<=15)
+        printf("No tiene anemia.");
+    else if(12<edadM&&edadM<=60&&11.5<=HemoN&&HemoN<=15)
+        printf("No tiene anemia.");
+    else if(12<edadM&&edadM<=60&&11.5<=HemoN&&HemoN<=15)
+        printf("No tiene anemia.");
+    else if (60<edadM&&edadM<=120&&12.6<=HemoN&&HemoN<=15.5)
+        printf("No tiene anemia.");
+    else if (120<edadM&&edadM<=180&&13<=HemoN&&HemoN<=15.5)
+        printf("No tiene anemia.");
+    else
+        printf("Tiene anemia.");
+    
+}
