@@ -1,0 +1,30 @@
+/******************************************************************************
+
+Realizar un programa que permita convertir gados celsius a fahrenheit y viceversa
+
+*******************************************************************************/
+#include <stdio.h>
+#include <math.h>
+
+void main()
+{
+    float tcent,tfahre,ccent=0,cfar=0;
+    int op;
+    printf("MENU\n1)convertir a grados centigrados\n2)Convertir a grados fahernheit");
+    printf("\nEscoga una opcion: ");
+    scanf("%d",&op);
+    if(op==1)
+    {
+        printf("Ingrese los grados fahrenheit a convertir:");
+        scanf("%f",&tfahre);
+        ccent=((tfahre-32)*5)/9;
+        printf("Grados centigrados son: %.2f\n",ccent);
+    }
+    else
+    {
+        printf("Ingrese los grados celsius a convertir:");
+        scanf("%f",&tcent);
+        cfar=((ccent*9)/5))+32;
+        printf("Grados fahrenheit son: %.2f",cfar);
+    }
+}
