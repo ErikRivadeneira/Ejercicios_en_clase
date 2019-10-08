@@ -1,0 +1,33 @@
+/******************************************************************************
+
+Realizar un programa que determine si una persona es mayor o menor de edad:
+datos de entrada
+entero:edad
+
+proceso 
+output @ingrese la edad
+input edad
+ si edad>=18
+    output mayor de edad
+ else
+    output menor de edad
+
+
+*******************************************************************************/
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    int edad;
+    char nombre[10];
+    printf("Ingrese su edad: ");
+    scanf("%d",&edad);
+    printf("Ingrese su nombre: ");
+    gets(nombre);
+    if(edad>=18)
+        printf("%s, es mayor de edad",nombre);
+    else
+        printf ("%s, es menor de edad",nombre);
+    
+}
