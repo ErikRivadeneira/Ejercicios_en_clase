@@ -1,0 +1,80 @@
+/******************************************************************************
+
+realizar un programa que contenga un menu con las siguientes opciones
+
+*******************************************************************************/
+#include <stdio.h>
+#include <math.h>
+
+void main()
+{
+    int opcion, dia, mes, ano,diaA,mesA,anoA,diaE=0,mesE=0,anoE=0;
+    float a,b,c,base,altura, area=0,x1=0,x2=0;
+    printf("MENU PRINCIPAL\n1)Área del triángulo.\n2)Ecuaciónb cuadrática.\n3)Edad de la persona\nEscoga una opción: ");
+    scanf("%d",&opcion);
+    switch(opcion)
+    {
+        case 1:
+        {
+            printf ("Ingrese la altura del triángulo: ");
+            scanf("%f",&altura);
+            printf("Ingrese la base del triángulo: ");
+            scanf("%f",&base);
+            area=(altura*base)/2;
+            printf("El Área de su triángulo es de %.2f", area);
+        }
+        break;
+        case 2:
+        {
+            printf("Ingrese el coeficiente a: ");
+            scanf("%f",&a);
+            printf("Ingrese el coeficiente b: ");
+            scanf("%f",&b);
+            printf("Ingrese el coeficiente c: ");
+            scanf("%f",&c);
+            x1=(-b+sqrt(pow(b,2)- 4*a*c))/(2*a);
+            x2=(-b-sqrt(pow(b,2)- 4*a*c))/(2*a);
+            printf("El valor x1 es %.2f",x1);
+            printf("\nEl valor x2 es%.2f",x2);
+        }
+        case 3:
+        {
+            printf("Ingrese el día, mes y año de nacimiento:");
+            scanf("%d,%d,%d",&dia,&mes,&ano);
+            printf("Ingrese la fecha actual en día mes y año:");
+            scanf("%d,%d,%d",&diaA,&mesA,&anoA);
+            if(dia>=1&&dia<=31&&mes==1&&mes==3&&mes==5&&mes==7&&mes==8&&mes==10&&mes==12)
+            {
+                anoE=anoA-ano;
+                diaE=(diaA+ 31)-dia;
+                if(mesA<mes)
+                    mesA=mesA+ 12;
+                mesE=mesA-mes;
+                printf("Llevas %d días, %d meses, y %d años de vida.",diaE,mesE,anoE);
+            }
+            else if (dia>=1&&dia<=30&&mes==2&mes==4&&mes==6&&mes==9&&mes==11)
+            {
+                anoE=anoA-ano;
+                diaE=(diaA+ 30)-dia;
+                if(mesA<mes)
+                    mesA=mesA+ 12;
+                mesE=mesA-mes;
+                printf("Llevas %d días, %d meses, y %d años de vida.",diaE,mesE,anoE);
+            }
+            else
+            {
+                anoE=anoA-ano;
+                diaE=(diaA+ 28)-dia;
+                if(mesA<mes)
+                    mesA=mesA+ 12;
+                mesE=mesA-mes;
+                printf("Llevas %d días, %d meses, y %d años de vida.",diaE,mesE,anoE);
+            }
+        }
+        break;
+        default:
+            printf("Opción inválida.");
+        break;
+    }
+}
+
