@@ -1,0 +1,26 @@
+#include <stdio.h>
+void main()
+{
+    int num;
+    printf("Ingrese un numero, si desea terminar ingrese 0: \n");
+    scanf("%d",&num);
+    while(num!=0)
+    {
+        while(num<0)
+        {
+            printf("Por favor ingrese un número mayor a CERO: ");
+            scanf("%d",&num);
+        }
+        if(num%2==0&&num!=0)
+        {
+            printf("Par.\n");
+        }
+        else
+        {
+            printf("Impar.\n");
+        }
+        printf("Ingrese un numero, si desea terminar ingrese 0: \n");
+        scanf("%d",&num);
+    }
+    printf("Ha salido del programa.")
+}
