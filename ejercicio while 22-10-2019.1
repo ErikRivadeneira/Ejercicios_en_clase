@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+void main()
+{
+    int cont=1,cantNum,num;
+    printf("Ingrese la cantidad: \n");
+    scanf("%d",&cantNum);
+    while(cont<=cantNum)
+    {
+        printf("Ingrese un numero: \n");
+        scanf("%d",&num);
+        while(num<0)
+        {
+            printf("Por favor ingrese un número mayor a CERO: ");
+            scanf("%d"&num);
+        }
+        if(num%2==0)
+            printf("Par.\n");
+        else
+            ("Impar.\n");
+        cont++;
+    }
+}
