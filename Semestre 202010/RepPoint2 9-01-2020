@@ -1,0 +1,38 @@
+/*Realizar un programa que tenga dos funciones:
+inicializar ementos de arreglo.
+ingresar elementos del arreglo via teclado con punteros*/
+#include <stdio.h>
+void inicializaArr (int [], int*);
+void IngDatArr (int [], int tam, int*);
+void main()
+{
+	int arreglo[]={2,3,1,-4}, *p,tam;
+	inicializaArr(arreglo,p);
+	printf("\nIngrese el tama%co del arreglo: ",164);
+	scanf("%d",&tam);
+	IngDatArr(arreglo, tam, p);
+}
+void inicializaArr (int arreglo[],int *p)
+{
+	int count=0;
+	p=arreglo;
+	for(count=0;count<4;count++)
+	{
+		printf("%d\n",*p++);
+	}
+}
+void IngDatArr (int arreglo[], int tam, int *p)
+{
+	int i;
+	for (i=0; i<tam;i++)
+	{
+		printf("\nIngrese el elemento  %d: ", ++i);
+		--i;
+		scanf("%d", &arreglo[i]);
+	}
+	p=arreglo;
+	for (i=0;i<tam;i++)
+	{
+		printf("\n%d",*p++);
+	}
+}
